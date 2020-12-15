@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const sqlite = require('sqlite3').verbose();
+const sqlite = require('sqlite4').verbose();
 
 let prefix = '-';
 
