@@ -55,6 +55,7 @@ client.on('message', message => {
     }
     if (message.content.toLocaleLowerCase = JoinCode2) {
         RussianRoulette.push(message.author.username + ', ')
+        message.channel.send(RussianRoulette)
     }
 
 
