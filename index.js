@@ -47,8 +47,9 @@ client.on('message', message => {
     }
     Gamestarted = false
     if (message.content.toLocaleLowerCase = 'russian') {
+        Gamestarted = true
         if (Gamestarted = false) {
-            Gamestarted = true
+            
             RussianRoulette.push(message.author.username + ', ') 
             var RandomName=  Math.floor((Math.random() * RussianRoulette.length));
             var RandomNames= RussianRoulette[RandomName];
