@@ -52,7 +52,7 @@ client.on('message', message => {
             RussianRoulette.push(message.author.username + ', ') 
             var RandomName=  Math.floor((Math.random() * RussianRoulette.length));
             var RandomNames= RussianRoulette[RandomName];
-            message.channel.send(RandomNames)
+            message.channel.send(RussianRoulette)
             message.channel.send( '#' + JoinCode)
             setTimeout(() => {
                 Gamestarted = false
