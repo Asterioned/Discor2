@@ -20,6 +20,29 @@ client.on('message', message => {
   
     const args = message.content.trim().split(/ +/g);
     const cmd = args[0].slice(prefix.length).toLowerCase(); // case INsensitive, without prefix
+
+    let JoinCode = '';  
+    let JoinCode2 = '#' + JoinCode
+    for (let i = 0; i < 3; i++) {
+        const x = GenerateE();
+        JoinCode += x;    
+    }
+    function GetLowerCase()  {
+        return LowerCase[Math.floor(Math.random() *
+            LowerCase.length)] 
+    }
+    function GetNumber()  {
+        return Numbers[Math.floor(Math.random() *
+            Numbers.length)] 
+    }
+    function GenerateE() {
+        const XS = []
+        XS.push(GetLowerCase())
+        XS.push(GetNumber())
+        return XS[Math.floor(Math.random() * XS.length)
+        ]
+    }
+
     if (message.content.toLocaleLowerCase = 'russian') {
         const Numbers = '0123456789';
         const LowerCase = 'abcdefghijklmnopqrstuvwxyz';
@@ -28,29 +51,11 @@ client.on('message', message => {
         var RandomName=  Math.floor((Math.random() * RussianRoulette.length));
         var RandomNames= RussianRoulette[RandomName];
         message.channel.send(RandomNames)
-        let JoinCode = '';  
-        for (let i = 0; i < 3; i++) {
-            const x = GenerateE();
-            JoinCode += x;    
-        }
-        function GetLowerCase()  {
-            return LowerCase[Math.floor(Math.random() *
-                LowerCase.length)] 
-        }
-        function GetNumber()  {
-            return Numbers[Math.floor(Math.random() *
-                Numbers.length)] 
-        }
-        function GenerateE() {
-            const XS = []
-            XS.push(GetLowerCase())
-            XS.push(GetNumber())
-            return XS[Math.floor(Math.random() * XS.length)
-            ]
-        }
-        message.channel.send(JoinCode)
+        message.channel.send( '#' + JoinCode)
     }
-    
+    if (message.content.toLocaleLowerCase = JoinCode2) {
+        RussianRoulette.push(message.author.username + ', ')
+    }
 
 
 
