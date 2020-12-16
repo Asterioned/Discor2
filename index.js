@@ -29,7 +29,7 @@ client.on('message', message => {
         var RandomNames= RussianRoulette[RandomName];
         message.channel.send(RandomNames)
         let JoinCode = '';  
-        for (let i = 0; i < Len; i++) {
+        for (let i = 0; i < 3; i++) {
             const x = GenerateE();
             JoinCode += x;    
         }
