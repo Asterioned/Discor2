@@ -45,13 +45,19 @@ client.on('message', message => {
         return XS[Math.floor(Math.random() * XS.length)
         ]
     }
-
+    Gamestarted = false
     if (message.content.toLocaleLowerCase = 'russian') {
-        RussianRoulette.push(message.author.username + ', ') 
-        var RandomName=  Math.floor((Math.random() * RussianRoulette.length));
-        var RandomNames= RussianRoulette[RandomName];
-        message.channel.send(RandomNames)
-        message.channel.send( '#' + JoinCode)
+        if (Gamestarted = false) {
+            Gamestarted = true
+            RussianRoulette.push(message.author.username + ', ') 
+            var RandomName=  Math.floor((Math.random() * RussianRoulette.length));
+            var RandomNames= RussianRoulette[RandomName];
+            message.channel.send(RandomNames)
+            message.channel.send( '#' + JoinCode)
+            setTimeout(() => {
+                Gamestarted = false
+            }, 90000);
+        }
     }
     if (message.content.toLocaleLowerCase = JoinCode2) {
         RussianRoulette.push(message.author.username + ', ')
