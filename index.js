@@ -50,7 +50,7 @@ client.on('message', message => {
         }
         message.channel.send(JoinCode)
     }
-    if (message.content.toLocaleLowerCase = JoinCode) {}
+    
 
 
 
