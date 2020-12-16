@@ -19,7 +19,7 @@ client.on('message', message => {
   
     const args = message.content.trim().split(/ +/g);
     const cmd = args[0].slice(prefix.length).toLowerCase(); // case INsensitive, without prefix
-    if (message.content.toLocaleLowerCase = 'Russian') {
+    if (message.content.toLocaleLowerCase = 'russian') {
         const RussianRoulette = [];
         RussianRoulette.push(message.author.username) 
     }
