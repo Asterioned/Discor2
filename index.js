@@ -9,7 +9,8 @@ client.on('ready', () => {
     console.log(`${client.user.tag} is Online and ready to go!`)
     client.user.setUsername("Russian roulette")
     client.user.setActivity("In the snow"); 
-    let db = new sqlite.Database('./Database1.db', sqlite.OPEN_READWRITE | sqlite.OPEN_CREATE)
+    let db = new sqlite.Database('./Databse.db', sqlite.OPEN_READWRITE | sqlite.OPEN_CREATE);
+    db.run(`CREATE TABLE IF NOT EXISTS data(userid INTEGER NOT NULL, username TEXT NOT NULL, coins INTEGER NOT NULL)`);
 })
 const IsNumber = (str) => /^\d+$/.test(str);
 
