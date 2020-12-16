@@ -21,7 +21,10 @@ client.on('message', message => {
     const cmd = args[0].slice(prefix.length).toLowerCase(); // case INsensitive, without prefix
     if (message.content.toLocaleLowerCase = 'russian') {
         const RussianRoulette = [];
-        RussianRoulette.push(message.author.username) 
+        RussianRoulette.push(message.author.username + ',') 
+        var RandomName=  Math.floor((Math.random() * RussianRoulette.length));
+        var RandomNames= RussianRoulette[RandomName];
+        console.log(RandomNames)
     }
 
 
