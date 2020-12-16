@@ -16,16 +16,41 @@ const IsNumber = (str) => /^\d+$/.test(str);
 
 client.on('message', message => {
     if (!message.content.startsWith(prefix)) return;
+    if (message.author.bot) return;
   
     const args = message.content.trim().split(/ +/g);
     const cmd = args[0].slice(prefix.length).toLowerCase(); // case INsensitive, without prefix
     if (message.content.toLocaleLowerCase = 'russian') {
+        const Numbers = '0123456789';
+        const LowerCase = 'abcdefghijklmnopqrstuvwxyz';
         const RussianRoulette = [];
         RussianRoulette.push(message.author.username + ', ') 
         var RandomName=  Math.floor((Math.random() * RussianRoulette.length));
         var RandomNames= RussianRoulette[RandomName];
         message.channel.send(RandomNames)
+        let JoinCode = '';  
+        for (let i = 0; i < Len; i++) {
+            const x = GenerateE();
+            JoinCode += x;    
+        }
+        function GetLowerCase()  {
+            return LowerCase[Math.floor(Math.random() *
+                LowerCase.length)] 
+        }
+        function GetNumber()  {
+            return Numbers[Math.floor(Math.random() *
+                Numbers.length)] 
+        }
+        function GenerateE() {
+            const XS = []
+            XS.push(GetLowerCase())
+            XS.push(GetNumber())
+            return XS[Math.floor(Math.random() * XS.length)
+            ]
+        }
+        message.channel.send(JoinCode)
     }
+    if (message.content.toLocaleLowerCase = JoinCode) {}
 
 
 
