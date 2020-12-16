@@ -23,6 +23,8 @@ client.on('message', message => {
 
     let JoinCode = '';  
     let JoinCode2 = '#' + JoinCode
+    const Numbers = '0123456789';
+    const LowerCase = 'abcdefghijklmnopqrstuvwxyz';
     for (let i = 0; i < 3; i++) {
         const x = GenerateE();
         JoinCode += x;    
@@ -44,8 +46,6 @@ client.on('message', message => {
     }
 
     if (message.content.toLocaleLowerCase = 'russian') {
-        const Numbers = '0123456789';
-        const LowerCase = 'abcdefghijklmnopqrstuvwxyz';
         const RussianRoulette = [];
         RussianRoulette.push(message.author.username + ', ') 
         var RandomName=  Math.floor((Math.random() * RussianRoulette.length));
